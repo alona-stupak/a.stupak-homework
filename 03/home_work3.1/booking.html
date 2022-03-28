@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="utf-8">
+    <title>Бронювання залу фотостудії</title>
+    <link rel="stylesheet" type="text/css"
+          href="styles.css">
+</head>
+ <body>
+ <form method="get">
+     <h1>Бронювання залу фотостудії</h1>
+     <div>
+         <label for="lastname">*Прізвище:</label>
+     </div>
+    <div>
+        <input type="text" id="lastname" placeholder="Введіть прізвище" minlength="2" maxlength="64">
+    </div>
+     <div>
+         <label for="name">*Ім'я:</label>
+     </div>
+     <div>
+         <input type="text" id="name" placeholder="Введіть їм'я" minlength="2" maxlength="64">
+     </div>
+     <div>
+         <label for="email">*Email:</label>
+     </div>
+     <div>
+         <input type="email" id="email" placeholder="введіть email" minlength="6" maxlength="255">
+     </div>
+     <div>
+         <label for="tel">*Телефон:</label>
+     </div>
+     <div>
+         <input type="tel" id="tel" placeholder="+380000000000" minlength="13" maxlength="13">
+     </div>
+     <div>
+         <label for="instagram">*Профіль Instagram:</label>
+     </div>
+     <div>
+         <input type="url" id="instagram" placeholder="https://www.instagram.com/" minlength="23" maxlength="255">
+     </div>
+     <div>
+         <label for="room">*Зал:</label>
+     </div>
+     <div>
+         <select id="room">
+             <option value="Оберіть зал">Оберіть зал</option>
+             <option value="Зал1">Зал1</option>
+             <option value="Зал2">Зал2</option>
+             <option value="Зал3">Зал3</option>
+         </select>
+     </div>
+         <div>
+             <label for="datetime-local">*Дата і час початку</label>
+         </div>
+         <div>
+             <input type="datetime-local" name="datetime-local"
+                    id="datetime-local" min="2022-03-06T09:00:00" max="2023-01-01T09:00:00">
+         </div>
+         <div>
+             <label for="datetimefinish">*Дата і час кінця</label>
+         </div>
+     <div>
+         <input type="datetime-local" id="datetimefinish" name="datetime-local"
+                 min="2022-03-06T09:00:00" max="2023-01-01T09:00:00">
+     </div>
+     <div>
+         <label for="quantity">*Кількість людей:</label>
+     </div>
+     <div>
+         <input type="number" id="quantity" min="1" max="10" step="1" value="5">
+     </div>
+     <div>
+         <label for="color">*Колір залу:</label>
+     </div>
+     <div>
+         <input type="color" id="color">
+     </div>
+     <div>
+         <label for="coment">*Коментар:</label>
+     </div>
+     <div>
+     <textarea id="coment" rows="5" cols="25"></textarea>
+     </div>
+     <div>
+         <label for="car">
+             <input type="checkbox" value="carrots" id="car" checked>
+             Я погоджуюся з <a href="https://google.com" title="Google - це така пошукова система">правилами фотостудії</a>
+         </label>
+     </div>
+         <div>
+             <button type="reset">Очистити</button>
+             <button type="submit">Надіслати</button>
+         </div>
+ </form>
+ </body>
+</html>

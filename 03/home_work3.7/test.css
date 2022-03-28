@@ -1,0 +1,33 @@
+.page li{
+display: inline-block;
+background-color: #b87051;
+padding: 1em 3em;
+}
+.wrapper{
+display: flex;
+}
+.wrapper div{
+background-color: red;
+padding: 1em;
+margin: 0.5em;
+}
+.box{
+display: flex;
+}
+.box div{
+background-color: blue;
+padding: 0.5em;
+margin: 0.2em;
+flex: 1 0 auto;
+}
+.boxes{
+display: flex;
+flex-wrap: wrap;
+}
+.boxes div{
+background-color: #a25257;
+padding: 0.2em;
+margin: 0.1em;
+flex: 1 0 auto;
+width: 45%;
+}

@@ -1,0 +1,50 @@
+/*.container {
+ width: 100%;
+ margin-right: auto;
+ margin-left: auto; }
+@media
+(min-width
+: 36em) {
+ .container {
+ max-width: 33.75em
+;
+ } }
+@media
+(min-width
+: 48em) {
+ .container {
+ max-width: 45em
+;
+ } }
+@media
+(min-width
+: 62em) {
+ .container {
+ max-width: 60em
+;
+ } }
+@media
+(min-width
+: 75em) {
+ .container {
+ max-width: 71.75em
+;
+width: 50%;
+ } }
+@media
+(min-width
+: 87.5em) {
+ .container {
+ max-width: 82.5em
+;
+ } }*/
+ @media (max-width: 75em) {
+  div {
+  width: 50%;
+  }
+ }
+ @media (max-width: 36em) {
+  div {
+  width: 100%;
+  }
+ }

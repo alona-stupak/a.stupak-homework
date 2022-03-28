@@ -1,0 +1,13 @@
+.float-left{
+float: left;
+background-color: #cfe8dc;
+padding: 2em;
+margin: 0.5em 1em;
+}
+.float-right{
+background-color: #cfe8dc;
+padding: 1em 2em;
+margin: 0 0 0 0.5em;
+height: 8em;
+float: right;
+}

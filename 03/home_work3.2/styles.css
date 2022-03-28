@@ -1,0 +1,30 @@
+* {
+font-family: Arial, sans-serif;
+font-size: 16px;
+line-height: 120%;
+color: #333333;
+
+}
+.size {
+line-height: 140%
+}
+
+a {
+color: #000000;
+}
+a:link {
+}
+a:visited {
+none
+}
+a:focus {
+}
+a:hover {
+text-decoration: none;
+color: #00008B;
+}
+a:active {
+}
+h1 {
+text-align: center;
+}
