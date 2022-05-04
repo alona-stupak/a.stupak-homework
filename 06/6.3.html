@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let a = 10,
+b = 20;
+// ваш код пишіть тут
+b = [a, a = b];
+b = b.shift();
+console.log( a, b ); // => 20, 10
+
+let c = 10,
+    d = 20;
+c = [d, d = c][0];
+console.log( c, d );
+
+let e = 10;
+f = 20;
+[e, f] = [f, e];
+console.log( e, f );
+
+let g = 10;
+h = 20;
+g = g + h;
+h = g - h;
+g = g - h;
+console.log( g, h );
+
+</script>
+</body>
+</html>
