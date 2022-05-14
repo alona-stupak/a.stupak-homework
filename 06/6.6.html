@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function capitalize(text)
+    {
+        let cityName = text;
+        let cityName1 = cityName.substring(0,1).toUpperCase();
+        let cityName2 = cityName.substring(1).toLowerCase();
+        let cityName3 = cityName1 + cityName2;
+        console.log (cityName3);
+    }
+    capitalize('стОКГольМ');
+    capitalize('одеСА');
+    /*capitalize(1234567);
+    capitalize(999999n);
+    capitalize(false);*/
+    capitalize(["лЬвів", "одеСА", "хАРКіВ"][0]);
+    capitalize(["лЬвів", "одеСА", "хАРКіВ"][1]);
+    capitalize(["лЬвів", "одеСА", "хАРКіВ"][2]);
+
+</script>
+</body>
+</html>
