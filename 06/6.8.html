@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function getRandomInt( min, max)
+    {
+        min = Math.round(min); //Math.ceil
+        max = Math.round(max); //Math.floor
+        if( min>max )
+        {
+            max = [min, min = max][0];
+            console.log(max);
+        }
+        return Math.floor(Math.random() * (max - min)) + min;
+
+    }
+    let randomInt = getRandomInt( 1, 100 );
+    console.log( getRandomInt( 1, 100 ) + randomInt );
+</script>
+
+</body>
+</html>
