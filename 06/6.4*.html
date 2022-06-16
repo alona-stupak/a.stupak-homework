@@ -9,12 +9,10 @@
     // let accessAllowed = ( age > 18 ) ? 'Yes' : ( withParents ? 'Yes' : 'No' );
   let age = 15;
   let withParents = true;
+    accessAllowed ='No';
   if(  age > 18 || withParents)
   {
       accessAllowed = 'Yes';
-  }
-  if(!withParents) {
-      accessAllowed ='No';
   }
     console.info( accessAllowed );
 </script>

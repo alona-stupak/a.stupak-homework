@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css"
+          href="6.11.css">
+</head>
+<body>
+<main>
+    <form action="#" method="get">
+        <div class="boxes">
+            <div class="box">
+                <div><label for="operand1">Операнд1</label></div>
+                <div class="box1"><input id="operand1" type="number" name="operand1"></div>
+               </div> 
+
+            <div class="box">
+                <div><label for="operation">Дія</label></div>
+                <div class="box1"><select id="operation">
+                    <option hidden disabled selected>Оберіть дію...</option>
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="*">*</option>
+                    <option value="/">/</option>
+                    <option value="**">**</option>
+                    <option value="%">%</option>
+                </select></div>
+            </div>
+
+           <div class="box">
+            <div><label for="operand2">Операнд 2</label></div>
+            <div class="box1"><input id="operand2" type="number" name="operand2"></div>
+            </div>
+
+           <div class="box">
+            <div><label for="button"></label></div>
+            <div class="box1"><button type="button" id="button" name="equality">=</button></div>
+            </div>
+
+            <div class="box">
+            <div><label for="result">Результат</label></div>
+            <div class="box1"><input id="result" type="number" name="result" readonly></div>
+            </div>
+
+        </div>
+    </form>
+    <script>
+
+        let butt = document.getElementById( "button");
+        function calculator(){
+            let operand1 = parseFloat(document.getElementById("operand1").value);
+            let operation = document.getElementById( "operation").value;
+            let operand2 = parseFloat(document.getElementById("operand2").value);
+            let result;
+            switch (operation) {
+                case '+':
+                    result = operand1 + operand2;
+                    break;
+                case '-':
+                    result = operand1 - operand2;
+                    break;
+                case '*':
+                    result = operand1 * operand2;
+                    break;
+                case '/':
+                    if( operand2 === 0){
+                        result = NaN;
+                    }
+                    result = operand1 / operand2;
+                    break;
+                case '**':
+                    result = operand1 ** operand2;
+                    break;
+                case '%':
+                    result = operand1 % operand2;
+                    break;
+                default:
+                    result = 'Оберіть дію';
+            }
+            document.getElementById("result").value = result;
+            //console.log( result );
+            //console.log(operand1);
+            //console.log(operand2);
+            //console.log(operation);
+        }
+        butt.onclick = calculator;
+
+    </script>
+</main>
+</body>
+</html> 
