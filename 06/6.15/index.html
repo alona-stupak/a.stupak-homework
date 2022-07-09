@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+      <head>
+          <meta charset="utf-8">
+          <title>Countries of the world</title>
+      </head>
+<body>
+<main>
+<script>
+    function countryContents(jsonItem) {
+        let form = document.createElement("form");
+        form.setAttribute("method", "get");//чи потрібно додавати всі ці атрибути до form?
+        form. setAttribute("id", "form");
+        form.setAttribute( "action", "#" );
+        let label = document.createElement("label");
+        label.setAttribute("for", "countries");
+        let input = document.createElement("input");
+        input.setAttribute("id", "countries");
+        input.setAttribute("list", "cList");
+        input.setAttribute("name", "countries");
+        let datalist = document.createElement("datalist");
+        datalist.setAttribute("id", "cList");
+        document.body.append(label);
+        document.body.append(input);
+        document.body.append( form );
+        form.append( datalist );
+        jsonItem.filter((item) => {
+            let option = document.createElement("option");     //для чого option https://thewebdev.info/2022/01/09/how-to-add-html-datalist-values-from-array-with-javascript/
+            option.setAttribute("value", item.Name); //
+            datalist.append(option);//таким чином додаємо список в алфавітному порядку
+        });
+    }
+    // await не може бути використана на верхньому рівні вкладеності тому необхідно створювати async-функцію
+    (async function() {
+        let response = await fetch( 'countries.json' );
+        if( response.ok ) {
+            let jsonContents = await response.json(); // читаємо відповідь в форматі JSON
+            countryContents(jsonContents);
+        }
+        else { // HTTP не 200, обробляємо як помилку
+            console.error( 'Сталася помилка ' + response.status + ': ' + response.statusText );
+        }
+    })();
+</script>
+</main>
+</body>
+</html>
