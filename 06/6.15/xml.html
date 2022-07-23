@@ -8,19 +8,18 @@
 <body>
 <script>
     let xhr = new XMLHttpRequest();
-    xhr.open( 'GET', 'countries.json');
+    xhr.open('GET', 'countries.json');
     xhr.responseType = 'json';
     xhr.send();
-    xhr.onload = function() {
-        if( xhr.status === 200 ) {
-            console.log( xhr.response );
-    }
-    else {            // HTTP не 200, обробляємо як помилку
-        console.error( 'Сталася помилка ' + xhr.status + ': ' + xhr.statusText );
-    }
+    xhr.onload = function () {
+        if (xhr.status === 200) {
+            console.log(xhr.response);
+        } else {            // HTTP не 200, обробляємо як помилку
+            console.error('Сталася помилка ' + xhr.status + ': ' + xhr.statusText);
+        }
     };
-    xhr.onerror = function() {
-        console.error( 'Сталася помилка при виконанні запита до сервера' );
+    xhr.onerror = function () {
+        console.error('Сталася помилка при виконанні запита до сервера');
     };
 </script>
 </body>
