@@ -1,0 +1,27 @@
+<!!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>fetch</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script>
+    fetch('countries.json')
+        .then((response) => {
+            if (response.status !== 200) {
+                console.error('Сталася помилка ' + response.status);
+//throw new Error( response.status );
+            }
+            return response.json();
+        })
+        .then((jsonContents) => {
+            console.log(jsonContents);
+        })
+        .catch((errorText) => {
+            console.error('Сталася помилка: ' + errorText);
+            }
+        );
+</script>
+</body>
+</html>

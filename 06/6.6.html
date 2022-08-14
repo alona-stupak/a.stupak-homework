@@ -6,23 +6,42 @@
 </head>
 <body>
 <script>
-    function capitalize(text)
-    {
-        let cityName = text;
-        let cityName1 = cityName.substring(0,1).toUpperCase();
-        let cityName2 = cityName.substring(1).toLowerCase();
-        let cityName3 = cityName1 + cityName2;
-        //console.log (cityName3);
-        return (cityName3);//таким чином повертає результат?
+    function capitalize(text) {
+        if (typeof text === "string") {
+            let cityName = text;
+            let cityName1 = cityName.substring(0, 1).toUpperCase();
+            let cityName2 = cityName.substring(1).toLowerCase();
+            return cityName1 + cityName2;
+        }
+        else if (typeof text === 'object') {
+            let arrayNew = text;
+            for (let i = 0; i < arrayNew.length; i++) {
+                arrayNew[i] = capitalize(arrayNew[i]);
+            }
+            return arrayNew;
+        }
+        else{
+            return error();
+        }
     }
-    capitalize('стОКГольМ');
-    capitalize('одеСА');
-    /*capitalize(1234567);
-    capitalize(999999n);
-    capitalize(false);*/
-    capitalize(["лЬвів", "одеСА", "хАРКіВ"][0]);
-    capitalize(["лЬвів", "одеСА", "хАРКіВ"][1]);
-    capitalize(["лЬвів", "одеСА", "хАРКіВ"][2]);
+    function error(){
+        alert("невірно введене значення");
+    }
+    let cityNameCapitalized = capitalize( 1234567 );
+    console.log( cityNameCapitalized );
+    //capitalize('стОКГольМ');
+    //capitalize('одеСА');
+    //capitalize(1234567);
+    // capitalize(999999n);
+    //capitalize(false);
+
+    /*else if ( typeof text === 'object' ){
+           return text.map(function (capitalize)
+           {
+           return capitalize[ 0 ].toUpperCase() + capitalize.substring( 1 ).toLowerCase();
+           } ) //варіант перебору масиву через map
+       }*/
+
 
 </script>
 </body>

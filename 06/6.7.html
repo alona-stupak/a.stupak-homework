@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function capitalizeDefolt(text){
+        let cityName = text;
+        return cityName.substring(0, 1).toUpperCase() + cityName.substring(1).toLowerCase();
+    }
+    function capitalize(newCityName) {
+        let separator = ["на", "де", "лез"];  // створюємо змінну, що вказує на єлементи, які будуть розділювачем у рядку
+        return newCityName.split('-').map((text) =>         // метод split ділить рядок там де є розділювач, метод map перебирає масив
+        {
+        return text = (separator.some((sep) => (sep === text))) ? //метод some перевіряє чи підходить якийсь єлемент умові
+        text.toLowerCase() : capitalizeDefolt(text);
+        })
+        .join('-');  // об'єднуємо у рядок
+    }
+    let cityNameCapitalized = capitalize('Ріо-де-Жанейро');
+    console.log(cityNameCapitalized);
+ //Нью-Йорк
+ //Лос-Анджелес
+ //Ріо-де-Жанейро
+ //Франкфурт-на-Майні
+ //Сен-Сатюрнен-лез-Апт  //з цим не впоралась...
+ //Лагард-д'Апт
+</script>
+</body>
+</html>
